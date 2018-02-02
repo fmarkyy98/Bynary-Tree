@@ -8,17 +8,22 @@ namespace Binary_Tree
 {
     class BinaryTree<T>
     {
-        private Node<T> root = null;
-
-        public void Add(Node<T> insertable)
+        private Node<T> root;
+        
+        /// <summary>
+        /// Adds the paramether into the BinaryTree.
+        /// </summary>
+        /// <param name="insertable">The <T> type value what you'd like to add.</param>
+        public void Add(T insertable)
         {
             insert(insertable, root);
         }
-        private void insert(Node<T> insertable, Node<T> actual)
+        private void insert(T insertable, Node<T> actual)
         {
             if (actual == null)
             {
-                actual = insertable;
+                actual = new Node<T>();
+                actual.Value = insertable;
                 return;
             }
             if (actual.CompareTo(insertable) > 0)

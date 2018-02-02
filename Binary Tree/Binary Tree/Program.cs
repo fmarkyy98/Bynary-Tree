@@ -12,6 +12,13 @@ namespace Binary_Tree
 
         static void Main(string[] args)
         {
+            tree.Add("Fejes Jennifer");
+            tree.Add("Basa Richárd");
+            tree.Add("Budaházi Bendegúz");
+            tree.Add("Soós Barna");
+            tree.Add("Gáspár Marcel");
+            tree.Add("Fekete Márk");
+            Console.ReadKey();
         }
     }
 }

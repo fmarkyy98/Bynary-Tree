@@ -9,8 +9,8 @@ namespace Binary_Tree
     class Node<T> : IComparable
     {
         T value;
-        Node<T> left = null;
-        Node<T> right = null;
+        Node<T> left;
+        Node<T> right;
 
         public T Value
         {
@@ -30,10 +30,20 @@ namespace Binary_Tree
             set { right = value; }
         }
 
+
+        public Node() { }
+
+        public Node(T value)
+        {
+            this.value = value;
+
+        }
+
+
         /// <summary>
         /// Compare to a <T> to an other <T>.
-        /// Less than zero: This instance precedes obj in the sort order.
-        /// Zero: This instance occurs in the same position in the sort order as obj.
+        ///    Less than zero: This instance precedes obj in the sort order.
+        ///     Equal to zero: This instance occurs in the same position in the sort order as obj.
         /// Greater than zero: This instance follows obj in the sort order.
         /// Throws InvalidOperationException() if the compared type is not valid.
         /// </summary>
