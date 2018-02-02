@@ -8,18 +8,28 @@ namespace Binary_Tree
 {
     class BinaryTree<T>
     {
-        Node<T> root = null;
+        private Node<T> root = null;
 
-        public void Add(Node<T> insertable, Node<T> actula = this.root)
+        public void Add(Node<T> insertable)
         {
-            if (actula == null)
+            insert(insertable, root);
+        }
+        private void insert(Node<T> insertable, Node<T> actual)
+        {
+            if (actual == null)
             {
-                this.root = insertable;
+                actual = insertable;
                 return;
             }
-            if (actula.CompareTo(insertable) ==1)
+            if (actual.CompareTo(insertable) > 0)
             {
-                root.Left = insertable;
+                insert(insertable, root.Left);
+                return;
+            }
+            if (actual.CompareTo(insertable) < 0)
+            {
+                insert(insertable, root.Right);
+                return;
             }
         }
     }
