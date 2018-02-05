@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Binary_Tree
 {
-    class BinaryTree<T>
+    class BinaryTree<T> /*: IEnumerable<T>*/
     {
         private Node<T> root;
 
@@ -40,5 +40,6 @@ namespace Binary_Tree
                 return;
             }
         }
+
     }
 }

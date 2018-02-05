@@ -8,9 +8,9 @@ namespace Binary_Tree
 {
     class Node<T> : IComparable
     {
-        T value;
-        Node<T> left;
-        Node<T> right;
+        private T value;
+        private Node<T> left;
+        private Node<T> right;
 
         public T Value
         {
@@ -30,15 +30,12 @@ namespace Binary_Tree
             set { right = value; }
         }
 
-
         public Node() { }
 
         public Node(T value)
         {
             this.value = value;
-
         }
-
 
         /// <summary>
         /// Compare to a <T> to an other <T>.
@@ -70,6 +67,5 @@ namespace Binary_Tree
             }
             throw new InvalidOperationException();
         }
-
     }
 }
