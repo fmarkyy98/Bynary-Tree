@@ -9,31 +9,34 @@ namespace Binary_Tree
     class BinaryTree<T>
     {
         private Node<T> root;
-        
+
         /// <summary>
         /// Adds the paramether into the BinaryTree.
         /// </summary>
         /// <param name="insertable">The <T> type value what you'd like to add.</param>
         public void Add(T insertable)
         {
+            if (root == null) { root = new Node<T>(); }
             insert(insertable, root);
         }
+
         private void insert(T insertable, Node<T> actual)
         {
-            if (actual == null)
+            if (actual.Value == null)
             {
-                actual = new Node<T>();
                 actual.Value = insertable;
                 return;
             }
             if (actual.CompareTo(insertable) > 0)
             {
-                insert(insertable, root.Left);
+                if (actual.Left == null) { actual.Left = new Node<T>(); }
+                insert(insertable, actual.Left);
                 return;
             }
             if (actual.CompareTo(insertable) < 0)
             {
-                insert(insertable, root.Right);
+                if (actual.Right == null) { actual.Right = new Node<T>(); }
+                insert(insertable, actual.Right);
                 return;
             }
         }

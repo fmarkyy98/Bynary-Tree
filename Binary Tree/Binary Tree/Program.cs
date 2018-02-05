@@ -14,7 +14,7 @@ namespace Binary_Tree
         {
             tree.Add("Fejes Jennifer");
             tree.Add("Basa Richárd");
-            tree.Add("Budaházi Bendegúz");
+            tree.Add("Budaházy Bendegúz");
             tree.Add("Soós Barna");
             tree.Add("Gáspár Marcel");
             tree.Add("Fekete Márk");
