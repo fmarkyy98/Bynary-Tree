@@ -16,7 +16,7 @@ namespace Binary_Tree
             tree.Add("Basa Richárd");
             tree.Add("Budaházy Bendegúz");
             tree.Add("Soós Barna");
-            tree.Add("Gáspár Marcel");
+            tree.Add("Gáspár Marcell");
             tree.Add("Fekete Márk");
             Console.ReadKey();
         }
