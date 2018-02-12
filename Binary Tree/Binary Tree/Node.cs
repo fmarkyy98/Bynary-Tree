@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,14 +22,25 @@ namespace Binary_Tree
         public Node<T> Left
         {
             get { return left; }
-            set { left = value; }
+            set
+            {
+                left = value;
+                left.Parent = this;
+            }
+
         }
 
         public Node<T> Right
         {
             get { return right; }
-            set { right = value; }
+            set
+            {
+                right = value;
+                right.Parent = this;
+            }
         }
+
+        public Node<T> Parent { get; private set; }
 
         public Node() { }
 
@@ -36,6 +48,15 @@ namespace Binary_Tree
         {
             this.value = value;
         }
+        //public IEnumerable<T> InOrder
+        //{
+        //    get
+        //    {
+        //        if (left != null) foreach (var x in left.InOrder) yield return x;
+        //        yield return value;
+        //        if (right != null) foreach (var x in right) yield return x;
+        //    }
+        //}
 
         /// <summary>
         /// Compare to a <T> to an other <T>.
