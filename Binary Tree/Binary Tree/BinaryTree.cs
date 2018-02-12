@@ -37,7 +37,7 @@ namespace Binary_Tree
             public bool MoveNext()
             {
                 if (states.Count == 0) return false;
-                if (actual.Right != n) ;
+                if (actual.Right != n)
             }
 
             public void Reset()
