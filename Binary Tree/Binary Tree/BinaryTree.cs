@@ -51,6 +51,5 @@ namespace Binary_Tree
                 return;
             }
         }
-
     }
 }
