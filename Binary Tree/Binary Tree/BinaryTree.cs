@@ -18,7 +18,7 @@ namespace Binary_Tree
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new BinaryTreeEnum(root); // Buggy
+            return new BinaryTreeEnum(root); // nagyonBuggy
         }
 
         /// <summary>
